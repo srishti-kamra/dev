@@ -11,6 +11,11 @@
 		447E5834292204A800F0D541 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447E5833292204A800F0D541 /* ContentView.swift */; };
 		447E5836292204AA00F0D541 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447E5835292204AA00F0D541 /* Assets.xcassets */; };
 		447E5839292204AA00F0D541 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447E5838292204AA00F0D541 /* Preview Assets.xcassets */; };
+		447E5840292204E900F0D541 /* quizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447E583F292204E900F0D541 /* quizModel.swift */; };
+		447E58422922053E00F0D541 /* quizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447E58412922053E00F0D541 /* quizView.swift */; };
+		447E58442922056200F0D541 /* finalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447E58432922056200F0D541 /* finalView.swift */; };
+		447E5896293E4AF100F0D541 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 447E5895293E4AF100F0D541 /* ConfettiSwiftUI */; };
+		447E5898293F090F00F0D541 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447E5897293F090F00F0D541 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,10 @@
 		447E5833292204A800F0D541 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		447E5835292204AA00F0D541 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		447E5838292204AA00F0D541 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		447E583F292204E900F0D541 /* quizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizModel.swift; sourceTree = "<group>"; };
+		447E58412922053E00F0D541 /* quizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizView.swift; sourceTree = "<group>"; };
+		447E58432922056200F0D541 /* finalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalView.swift; sourceTree = "<group>"; };
+		447E5897293F090F00F0D541 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447E5896293E4AF100F0D541 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +46,9 @@
 			isa = PBXGroup;
 			children = (
 				447E5830292204A800F0D541 /* sim */,
+				447E58452922154E00F0D541 /* Components  */,
+				447E58432922056200F0D541 /* finalView.swift */,
+				447E58412922053E00F0D541 /* quizView.swift */,
 				447E582F292204A800F0D541 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +68,7 @@
 				447E5833292204A800F0D541 /* ContentView.swift */,
 				447E5835292204AA00F0D541 /* Assets.xcassets */,
 				447E5837292204AA00F0D541 /* Preview Content */,
+				447E583F292204E900F0D541 /* quizModel.swift */,
 			);
 			path = sim;
 			sourceTree = "<group>";
@@ -65,6 +79,14 @@
 				447E5838292204AA00F0D541 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		447E58452922154E00F0D541 /* Components  */ = {
+			isa = PBXGroup;
+			children = (
+				447E5897293F090F00F0D541 /* Extension.swift */,
+			);
+			path = "Components ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +105,9 @@
 			dependencies = (
 			);
 			name = sim;
+			packageProductDependencies = (
+				447E5895293E4AF100F0D541 /* ConfettiSwiftUI */,
+			);
 			productName = sim;
 			productReference = 447E582E292204A800F0D541 /* sim.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 447E5825292204A800F0D541;
+			packageReferences = (
+				447E5894293E4AF100F0D541 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 447E582F292204A800F0D541 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				447E5834292204A800F0D541 /* ContentView.swift in Sources */,
+				447E58422922053E00F0D541 /* quizView.swift in Sources */,
+				447E5840292204E900F0D541 /* quizModel.swift in Sources */,
+				447E5898293F090F00F0D541 /* Extension.swift in Sources */,
 				447E5832292204A800F0D541 /* simApp.swift in Sources */,
+				447E58442922056200F0D541 /* finalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		447E5894293E4AF100F0D541 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		447E5895293E4AF100F0D541 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 447E5894293E4AF100F0D541 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 447E5826292204A800F0D541 /* Project object */;
 }
