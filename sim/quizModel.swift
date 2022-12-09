@@ -7,16 +7,13 @@ struct Quiz  {
     //specify what is the correct answer
     var correct : Int?
 }
- 
 //final quiz is an array that contains the questions 
 var myQuiz1 : [Quiz] = [
-
     Quiz(image: "wtf??", //meet me halfway
                   text: "What music video is this?",
                   answer: ["Just Can't Get Enough", "Meet Me Halfway", "Where Is The Love?", "Don't You Worry"],
                   correct: 1),
-
-     
+    
         Quiz(image: "dinnerTable",// Heavy
     text: "What music video is this?",
     answer: ["Numb","Heavy","Good Goodbye","In the End"],
@@ -43,8 +40,3 @@ func SaveScore(quiz : String , score : Int){
     UserDefaults.standard.set(score, forKey: quiz)
 }
  
-/*func LoadScore (quiz : String) -> Int{
-    return UserDefaults.standard.integer(forKey: quiz)
-}
-*/
-

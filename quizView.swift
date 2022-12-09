@@ -1,34 +1,30 @@
 import SwiftUI
- 
+
 //view for the quiz game
 struct Quiz1 : View {
-     
+    
     //number of question
     @State var i : Int = 0
-     
+    
     //var for the score
     @State var score = 0
     @State private var showActionSheet = false
     @State private var counter = 0
-     
+    
     var body: some View {
         VStack(alignment: .leading,spacing: 15){
-             
             //if i < of questions --> play question
             if(self.i < myQuiz1.count){
-                 
-                 
-               //Image
-          Image(myQuiz1[self.i].image!)
+                
+                //Image
+                Image(myQuiz1[self.i].image!)
                     .resizable()
                     .scaledToFit()
                     .padding(.horizontal)
-
                 
                 //text of the question
-                       Text(myQuiz1[self.i].text!)
-                 
-                 
+                Text(myQuiz1[self.i].text!)
+                
                 //answer 0
                 Button(action:{
                     self.showActionSheet = true
@@ -42,9 +38,8 @@ struct Quiz1 : View {
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color.purple,lineWidth: 2)
                         )
-                })
-            
-                 
+                }
+                )
                 //answer 1
                 Button(action:{
                     self.buttonAction(n: 1)
@@ -58,7 +53,8 @@ struct Quiz1 : View {
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color.purple,lineWidth: 2)
                         )
-                })
+                }
+                )
                 .actionSheet(isPresented: $showActionSheet) {
                     ActionSheet(
                         title: Text("Score"),
@@ -68,7 +64,7 @@ struct Quiz1 : View {
                         ]
                     )
                 }
-                 
+                
                 //answer 2
                 Button(action:{
                     self.buttonAction(n: 2)
@@ -92,7 +88,7 @@ struct Quiz1 : View {
                         ]
                     )
                 }
-                 
+                
                 //answer 3
                 Button(action:{
                     self.buttonAction(n: 1)
@@ -116,33 +112,34 @@ struct Quiz1 : View {
                         ]
                     )
                 }
- 
             }
-                 
+            
             //after last question --> show final view with score
             else{
+                
                 Text("Congratulations, you completed the game! 🥳")
-                                
+                
                 Text("Final Score: \(self.score) out of \(myQuiz1.count)")
                 Button(action: {
-                            counter += 1
-                        }) {
-                            Text("        🎶")
-                                .font(.system(size: 100))
-                        }
-                        .confettiCannon(counter: $counter)
+                    counter += 1
+                }) {
+                    Text("        🎶")
+                        .font(.system(size: 100))
+                }
+                .confettiCannon(counter: $counter)
                 
-            .confettiCannon(counter: $counter, colors: [.blue, .pink], rainHeight: 2000.0, radius: 700.0)
-                 
-            
+                .confettiCannon(counter: $counter, colors: [.blue, .pink], rainHeight: 2000.0, radius: 700.0)
             }
-             
-             
+            
+            
         }
         .padding(.horizontal)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .edgesIgnoringSafeArea(.all)
+        .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
     }
-     
-     
+    
+    
     //action of the buttons
     //n = answer [0,1,2,3]
     func buttonAction( n : Int){
@@ -152,12 +149,12 @@ struct Quiz1 : View {
         }
         //GO TO NEXT QUESTION
         self.i = self.i + 1
-         
+        
     }
-     
-     
+    
+    
 }
- 
+
 struct Quiz1_reviews: PreviewProvider {
     static var previews: some View {
         Quiz1()
