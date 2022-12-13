@@ -8,7 +8,7 @@
 import SwiftUI
 import AVKit
 import ConfettiSwiftUI
- 
+
 struct ContentView: View {
     //var for the score
     @State var score = 0
@@ -30,18 +30,18 @@ struct ContentView: View {
             .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
             .navigationBarTitle("",displayMode: .inline)
         }
-        }
     }
+}
 
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
-    
-    
-    
+}
 
- 
+
+
+
+
 
 
