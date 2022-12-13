@@ -7,7 +7,8 @@ struct Quiz  {
     //specify what is the correct answer
     var correct : Int?
 }
-//final quiz is an array that contains the questions 
+
+//final quiz is an array that contains the questions (source: flag hackwich provided by Mr. B)
 var myQuiz1 : [Quiz] = [
     Quiz(image: "wtf??", //meet me halfway
                   text: "What music video is this?",
