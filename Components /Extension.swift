@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 import SwiftUI
 
 // Custom modifier to call this title instead of adding three modifiers every time we create the title text.
