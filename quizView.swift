@@ -7,11 +7,13 @@ struct Quiz1 : View {
     var body: some View {
         VStack(alignment: .leading,spacing: 15){
             if(self.i < myQuiz1.count){
+                //Modifiers for my image
                 Image(myQuiz1[self.i].image!)
                     .resizable()
                     .scaledToFit()
                     .padding(.horizontal)
                 Text(myQuiz1[self.i].text!)
+                //Q1
                 Button(action:{
                     self.showActionSheet = true
                     self.buttonAction(n: 0)
@@ -26,6 +28,7 @@ struct Quiz1 : View {
                         )
                 }
                 )
+                //Q2
                 Button(action:{
                     self.buttonAction(n: 1)
                     self.showActionSheet = true
@@ -49,6 +52,7 @@ struct Quiz1 : View {
                         ]
                     )
                 }
+                //Q3
                 Button(action:{
                     self.buttonAction(n: 2)
                     self.showActionSheet = true
@@ -71,7 +75,7 @@ struct Quiz1 : View {
                         ]
                     )
                 }
-                
+                //Q4
                 Button(action:{
                     self.buttonAction(n: 1)
                     self.showActionSheet = true
